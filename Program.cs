@@ -19,7 +19,11 @@ namespace Keyboard_Input_4U___Assignment
             name = Console.ReadLine();
 
             Console.WriteLine("Please enter your age");
-            age = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out age))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
+
 
             birthYear = year - age;
 
@@ -32,11 +36,20 @@ namespace Keyboard_Input_4U___Assignment
 
             Console.WriteLine("Give me three numbers and I will add them together");
             Console.WriteLine("Please enter the first number");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out num1))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             Console.WriteLine("Please enter the second number");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             Console.WriteLine("Please enter the third number");
-            num3 = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out num3))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
 
             total = num1 + num2 + num3;
             Console.WriteLine("Your total is " + total);
@@ -47,12 +60,20 @@ namespace Keyboard_Input_4U___Assignment
             double distance1, distance2, distance3, average;
             Console.WriteLine("Give me three distances and I will find the average");
             Console.WriteLine("Please enter the first distance");
-            distance1 = Convert.ToDouble(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out distance1))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             Console.WriteLine("Please enter the second distance");
-            distance2 = Convert.ToDouble(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out distance2))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             Console.WriteLine("Please enter the third distance");
-            distance3 = Convert.ToDouble(Console.ReadLine());
-            
+            while (!double.TryParse(Console.ReadLine(), out distance3))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             average = (distance1 + distance2 + distance3) / 3;
             average = Math.Round(average, 2);
 
@@ -65,10 +86,15 @@ namespace Keyboard_Input_4U___Assignment
 
             Console.WriteLine("Give me two legs of a right triangle and I will find the hypotenuse");
             Console.WriteLine("Please enter the length of first leg");
-            leg1 = Convert.ToDouble(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out leg1))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             Console.WriteLine("Please enter the length of the second leg");
-            leg2 = Convert.ToDouble(Console.ReadLine());
-
+            while (!double.TryParse(Console.ReadLine(), out leg2))
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+            }
             hypotenuse = (leg1 * leg1) + (leg2 * leg2);
             hypotenuse = Math.Sqrt(hypotenuse);
             hypotenuse = Math.Round(hypotenuse, 2);
